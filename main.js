@@ -48,7 +48,9 @@ function printCards(questions) {
 
 function returnCardHTML(q) 
    {
-    console.log ("respuesta correcta"+q.correct_answer); 
+    console.log ("randon");
+    console.log (randomize(q.correct_answer,q.incorrect_answers)); 
+
     const card = `<div class="card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>
@@ -62,7 +64,13 @@ function returnCardHTML(q)
     return card;
 }
 
+function randomize(correct,incorrect)
+{
+    var ran = Math.random(0,3);
+    console.log(ran);
 
+
+}
 function returnAnswersHTML(correct, incorrects) {
     const correctHTML = `<div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>

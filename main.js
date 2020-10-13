@@ -43,8 +43,8 @@ function printCards(questions) {
 }
 
 function returnCardHTML(q) {
-    console.log("respuestas correctas"+ q.correct_answer);
-    console.log("respestas incorrectas"+ q.incorrect_answers);
+    //console.log("respuestas correctas"+ q.correct_answer);
+    //console.log("respestas incorrectas"+ q.incorrect_answers);
     const card = `<div class="card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>

@@ -66,9 +66,26 @@ function returnCardHTML(q)
 
 function randomize(correct,incorrect)
 {
+    let arrpre=[];
+    var inco=0;
     var ran = Math.floor(Math.random()*3)+0;
     console.log(ran);
+    for (var i=0;i<4;i++)
+        {
+            if(i==ran)
+            {
+                arrpre.push(correct);
+                console.log("agrege la correcta");
+            }
+            else
+            { 
+                arrpre.push(incorrect[inco]);
+                console.log("agregue la inco");
+                inco=inco+1;
 
+            }
+        }
+    console.log("array de pregunta"+arrpre);    
 
 }
 function returnAnswersHTML(correct, incorrects) {

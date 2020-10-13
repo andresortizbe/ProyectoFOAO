@@ -5,7 +5,11 @@ function getValuesQuestion(){
     const questionType= document.getElementById('type').value
     console.log(questionsQuantity+questionsCategory,questionsDifficulty,questionType)
     getQuestions(questionsQuantity,questionsCategory,questionsDifficulty,questionType);
-    return questionsQuantity,questionsCategory,questionsDifficulty,questionType
+    
+    
+    return questionsQuantity,questionsCategory,questionsDifficulty,questionType;
+    
+
 }
 function getQuestions(questionsQuantity, questionsCategory,questionsDifficulty,questionType) {
     fetch(`https://opentdb.com/api.php?amount=${questionsQuantity}&category=${questionsCategory}&difficulty=${questionsDifficulty}&type=${questionType}`)    
@@ -43,8 +47,8 @@ function printCards(questions) {
 }
 
 function returnCardHTML(q) {
-    //console.log("respuestas correctas"+ q.correct_answer);
-    //console.log("respestas incorrectas"+ q.incorrect_answers);
+    console.log("respuestas correctas"+ q.correct_answer);
+    console.log("respestas incorrectas"+ q.incorrect_answers);
     const card = `<div class="card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>

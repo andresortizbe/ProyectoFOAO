@@ -46,9 +46,9 @@ function printCards(questions) {
     // poner las preguntas en mi pÃ¡gina web
 }
 
-function returnCardHTML(q) {
-    console.log("respuestas correctas"+ q.correct_answer);
-    console.log("respestas incorrectas"+ q.incorrect_answers);
+function returnCardHTML(q) 
+   {
+    console.log ("respuesta correcta"+q.correct_answer); 
     const card = `<div class="card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>

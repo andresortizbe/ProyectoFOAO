@@ -66,7 +66,7 @@ function returnCardHTML(q)
 
 function randomize(correct,incorrect)
 {
-    var ran = Math.floor(Math.random(0,3));
+    var ran = Math.floor(Math.random(1,3));
     console.log(ran);
 
 

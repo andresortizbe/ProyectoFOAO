@@ -68,11 +68,10 @@ function returnAnswers(arr,indexcard)
     for (var i=0;i<arr.length;i++)
         {
             correctHTML += `
-            <label>Question ${pregunta.type} of ${pregunta.category}:<br><b> ${pregunta.question}</b></label>
-            <p>Answer: 
-                <br>
+            
+            
                 <label><input type="radio" name="respuesta${temp}" value="true" /> ${arr[i]} </label>
-            </p>
+            
             `;
         }
     

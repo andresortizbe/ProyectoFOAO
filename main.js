@@ -48,17 +48,11 @@ function printCards(questions) {
 
 function returnCardHTML(q) 
    {
-    console.log ("randon");
-    console.log (randomize(q.correct_answer,q.incorrect_answers)); 
-
     const card = `<div class="card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${q.question}</h6>
-                        ${returnAnswersHTML(q.correct_answer, q.incorrect_answers)}           
-                        
-
-
+                        ${returnAnswers(randomize(q.correct_answer, q.incorrect_answers))}           
                     </div>
                 </div>`
     return card;
@@ -86,30 +80,24 @@ function randomize(correct,incorrect)
 
             }
         }
-    console.log("array de pregunta"+arrpre);    
+    return arrpre;    
 
 }
-function returnAnswersHTML(correct, incorrects) {
-    const correctHTML = `<div class="form-check">
+function returnAnswers(arr) {
+
+    for (var i=0;i<arr.length;i++)
+        {
+          const correctHTML = `<div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
-                            ${correct}
+                            ${arr[i]};
                             </label>
                         </div>`;
 
-
-    let incorrectHTML = '';
-    incorrects.forEach((incorrect) => {
-        incorrectHTML += `<div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                            <label class="form-check-label" for="exampleRadios1">
-                            ${incorrect}
-                            </label>
-                        </div>`;
-    })
-
-
-    return correctHTML + incorrectHTML;
+        }
+    
+    
+    return correctHTML;
 }
 getCategories()
 getValuesQuestion()

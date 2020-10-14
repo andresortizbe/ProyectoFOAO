@@ -72,7 +72,8 @@ function randomize(correct,incorrect)
     console.log(ran);
     for (var i=0;i<4;i++)
         {
-            if(i==ran)
+            console.log("entre al for");
+            f(i==ran)
             {
                 arrpre.push(correct);
                 console.log("agrege la correcta");

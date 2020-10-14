@@ -62,7 +62,7 @@ function randomize(correct,incorrect)
 
 }
 
-function returnAnswer(arr,indexcard) 
+function returnAnswers(arr,indexcard) 
 {
     var correctHTML='';
     for (var i=0;i<arr.length;i++)

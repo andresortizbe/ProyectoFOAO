@@ -84,10 +84,10 @@ function randomize(correct,incorrect)
 
 }
 function returnAnswers(arr) {
-
+    var correctHTML;
     for (var i=0;i<arr.length;i++)
         {
-          const correctHTML = `<div class="form-check">
+          correctHTML = `<div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
                             ${arr[i]};

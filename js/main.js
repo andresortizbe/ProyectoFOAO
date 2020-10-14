@@ -67,12 +67,13 @@ function returnAnswers(arr,indexcard)
     var correctHTML='';
     for (var i=0;i<arr.length;i++)
         {
-            correctHTML += `<div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
-            ${arr[i]};
-            </label>
-        </div>`;
+            correctHTML += `
+            <label>Question ${pregunta.type} of ${pregunta.category}:<br><b> ${pregunta.question}</b></label>
+            <p>Answer: 
+                <br>
+                <label><input type="radio" name="respuesta${temp}" value="true" /> ${arr[i]} </label>
+            </p>
+            `;
         }
     
     

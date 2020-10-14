@@ -70,7 +70,7 @@ function returnAnswers(arr,indexcard)
             correctHTML += `
             
             
-                <label><input type="radio" name="respuesta${temp}" value="true" /> ${arr[i]} </label>
+                <label><input type="radio" name="respuesta${i}" /> ${arr[i]} </label>
             
             `;
         }

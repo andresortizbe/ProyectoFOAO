@@ -88,33 +88,33 @@ function randomize(correct,incorrect)
     return arrpre;    
 
 }
-// function returnAnswersHTML(correct, incorrects) {
-//     const correctHTML = `<div class="form-check">
-//                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-//                             <label class="form-check-label" for="exampleRadios1">
-//                             ${correct}
-//                             </label>
-//                         </div>`;
+//  function returnAnswersHTML(correct, incorrects) {
+//      const correctHTML = `<div class="form-check">
+//                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+//                              <label class="form-check-label" for="exampleRadios1">
+//                              ${correct}
+//                              </label>
+//                          </div>`;
 
 
-//     let incorrectHTML = '';
-//     incorrects.forEach((incorrect) => {
-//         incorrectHTML += `<div class="form-check">
-//                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-//                             <label class="form-check-label" for="exampleRadios1">
-//                             ${incorrect}
-//                             </label>
-//                         </div>`;
-//     })
+//      let incorrectHTML = '';
+//      incorrects.forEach((incorrect) => {
+//          incorrectHTML += `<div class="form-check">
+//                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+//                              <label class="form-check-label" for="exampleRadios1">
+//                              ${incorrect}
+//                              </label>
+//                          </div>`;
+//      })
 
 
-//     return correctHTML + incorrectHTML;
-// }
+//      return correctHTML + incorrectHTML;
+//  }
 function returnAnswers(arr) {
     var correctHTML='';
     for (var i=0;i<arr.length;i++)
         {
-          correctHTML = `<div class="form-check">
+          correctHTML += `<div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
                             ${arr[i]};

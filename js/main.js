@@ -31,35 +31,54 @@ function returnCardHTML(q, indexcard) {
                     <div class="card-body">
                     <h5 class="card-title">${q.category}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${q.question}</h6>
-                        ${returnAnswersHTML(q.correct_answer, q.incorrect_answers,indexcard)}           
+                        ${returnAnswers(randomize(q.correct_answer, q.incorrect_answers),indexcard)}           
                     </div>
                 </div>`
     return card;
 }
+function randomize(correct,incorrect)
+{
+    let arrpre=[];
+    var inco=0;
+    var ran = Math.floor(Math.random()*3)+0;
+    console.log(ran);
+    for (var i=0;i<4;i++)
+        {
+            console.log("entre al for");
+            if(i==ran)
+            {
+                arrpre.push(correct);
+                console.log("agrege la correcta");
+            }
+            else
+            { 
+                arrpre.push(incorrect[inco]);
+                console.log("agregue la inco");
+                inco=inco+1;
 
+            }
+        }
+    return arrpre;    
 
-function returnAnswersHTML(correct, incorrects) {
-    // const correctHTML = `<div class="form-check">
-    //                         <input class="form-check-input" type="radio" name="" id="" value="" checked>
-    //                         <label class="form-check-label" for="exampleRadios1">
-    //                         ${correct}
-    //                         </label>
-    //                     </div>`;
-
-    incorrects.push(correct)
-    let incorrectHTML = '';
-    incorrects.forEach((incorrect,index,indexvar) => {
-        incorrectHTML += `<div class="form-check">
-                            <input class="form-check-input" type="radio" name="answer" id="answer-${index}${indexvar}" value="${index}${indexvar}" checked>
-                            <label class="form-check-label" for="answer-${index}${indexvar}">
-                            ${incorrect}
-                            </label>
-                        </div>`;
-    })
-
-
-    return incorrectHTML;
 }
+
+function returnAnswer(arr,indexcard) 
+{
+    var correctHTML='';
+    for (var i=0;i<arr.length;i++)
+        {
+            correctHTML += `<div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+            ${arr[i]};
+            </label>
+        </div>`;
+        }
+    
+    
+    return correctHTML;
+}
+
 getValuesQuestion()
 import { getCategories} from './getCategorias.js'
 getValuesQuestion()    
